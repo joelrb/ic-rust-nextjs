@@ -25,23 +25,24 @@ const Greeting: React.FC<GreetingProps> = ({}) => {
 
   return (
     <Container size="1">
-      <Box p="2">
-        <Heading size="5">Greeting</Heading>
-        <Flex>
-          <TextFieldInput
-            id="name"
-            alt="Name"
-            type="text"
-            value={name}
-            onChange={onChangeName}
-          />
-          <Button onClick={() => call(name)}>Send</Button>
-        </Flex>
-        <Text size="1">
-          This component calls the <Code>greet</Code> method on the{" "}
-          <Code>hello</Code> actor.
-        </Text>
-      </Box>
+      <Heading size="5">Greeting</Heading>
+      <Flex>
+        <TextFieldInput
+          id="name"
+          alt="Name"
+          type="text"
+          placeholder="Name"
+          value={name}
+          onChange={onChangeName}
+        />
+        <Button type="button" onClick={() => call(name)}>
+          Send
+        </Button>
+      </Flex>
+      <Text size="1">
+        This component calls the <Code>greet</Code> method on the{" "}
+        <Code>hello</Code> actor.
+      </Text>
       <Box>
         {loading && <Text>Loading...</Text>}
         {error ? <Text>Error: {JSON.stringify(error)}</Text> : null}
