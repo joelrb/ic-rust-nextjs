@@ -1,3 +1,13 @@
+import {
+  Box,
+  Button,
+  Code,
+  Container,
+  Flex,
+  Heading,
+  Text,
+  TextFieldInput
+} from "@radix-ui/themes"
 import React, { useState } from "react"
 import { useActorMethod } from "service/hello"
 
@@ -14,26 +24,30 @@ const Greeting: React.FC<GreetingProps> = ({}) => {
   }
 
   return (
-    <div>
-      <section>
-        <h2>Greeting</h2>
-        <label htmlFor="name">Enter your name: &nbsp;</label>
-        <input
-          id="name"
-          alt="Name"
-          type="text"
-          value={name}
-          onChange={onChangeName}
-        />
-        <button onClick={() => call(name)}>Send</button>
-      </section>
-      <section>
-        <label>Response: &nbsp;</label>
-        {loading ? <span>Loading...</span> : null}
-        {error ? <span>Error: {JSON.stringify(error)}</span> : null}
-        {data && <span>{JSON.stringify(data)}</span>}
-      </section>
-    </div>
+    <Container size="1">
+      <Box p="2">
+        <Heading size="5">Greeting</Heading>
+        <Flex>
+          <TextFieldInput
+            id="name"
+            alt="Name"
+            type="text"
+            value={name}
+            onChange={onChangeName}
+          />
+          <Button onClick={() => call(name)}>Send</Button>
+        </Flex>
+        <Text size="1">
+          This component calls the <Code>greet</Code> method on the{" "}
+          <Code>hello</Code> actor.
+        </Text>
+      </Box>
+      <Box>
+        {loading && <Text>Loading...</Text>}
+        {error ? <Text>Error: {JSON.stringify(error)}</Text> : null}
+        {data && <Text>Message: {JSON.stringify(data)}</Text>}
+      </Box>
+    </Container>
   )
 }
 

@@ -27,6 +27,7 @@
     "generate": "dfx generate"
   },
   "dependencies": {
+    "@radix-ui/themes": "^2.0.0",
     "@re-actor/core": "^0.0.7",
     "next": "^13.5",
     "react": "^18.2",

@@ -1,38 +1,39 @@
 import Head from "next/head"
 
-import styles from "styles/Home.module.css"
-
+import { Box, Flex, Heading, Link, Separator } from "@radix-ui/themes"
 import Greeting from "components/Greeting"
 import Image from "next/image"
 
 function HomePage() {
   return (
-    <div className={styles.container}>
+    <Box>
       <Head>
         <title>Internet Computer</title>
       </Head>
-      <main className={styles.main}>
-        <h3 className={styles.title}>
+      <Flex justify="center" direction="column" gap="5">
+        <Heading align="center">
           Welcome to the Internet Computer starter template
-        </h3>
+        </Heading>
         <Greeting />
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://internetcomputer.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            width={140}
-            height={30}
-            src="/icp-logo.svg"
-            alt="DFINITY logo"
-            className={styles.logo}
-          />
-        </a>
-      </footer>
-    </div>
+        <Separator size="4" />
+        <footer>
+          <Flex justify="center">
+            <Link
+              href="https://internetcomputer.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                width={140}
+                height={30}
+                src="/icp-logo.svg"
+                alt="DFINITY logo"
+              />
+            </Link>
+          </Flex>
+        </footer>
+      </Flex>
+    </Box>
   )
 }
 
