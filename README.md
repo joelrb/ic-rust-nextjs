@@ -35,7 +35,8 @@ Running Local Internet Computer:
 
 Deploying to the Local Internet Computer:
 
-3. Run `yarn deploy` or `npm run deploy`
+3.1 Run `yarn deploy` or `npm run deploy`
+3.2 Run `yarn identity:deploy` or `npm run identity:deploy`
 
 Running Next.js app:
 

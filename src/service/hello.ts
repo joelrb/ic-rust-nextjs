@@ -7,11 +7,14 @@ export const {
   initialize,
   useReActor,
   useActorState,
-  useActorMethod
-} = createReActor(() =>
-  createActor(canisterId, {
-    agentOptions: {
-      host: process.env.NEXT_PUBLIC_IC_HOST
-    }
-  })
+  useActorMethod,
+  useAuthClient
+} = createReActor(
+  agent =>
+    createActor(canisterId, {
+      agent
+    }),
+  {
+    host: process.env.NEXT_PUBLIC_IC_HOST
+  }
 )
