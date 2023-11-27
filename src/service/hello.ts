@@ -9,12 +9,8 @@ export const {
   useActorState,
   useActorMethod,
   useAuthClient
-} = createReActor(
-  agent =>
-    createActor(canisterId, {
-      agent
-    }),
-  {
-    host: process.env.NEXT_PUBLIC_IC_HOST
-  }
+} = createReActor(agent =>
+  createActor(canisterId, {
+    agent
+  })
 )
