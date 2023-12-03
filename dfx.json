@@ -1,12 +1,8 @@
 {
   "canisters": {
     "hello": {
-      "type": "rust",
-      "candid": "backend/hello/hello.did",
-      "package": "hello",
-      "declarations": {
-        "node_compatibility": true
-      }
+      "main": "backend/hello/main.mo",
+      "type": "motoko"
     },
     "internet-identity": {
       "type": "pull",
