@@ -4,7 +4,7 @@ import { useActorMethod } from "service/hello"
 interface GreetingProps {}
 
 const Greeting: React.FC<GreetingProps> = ({}) => {
-  const { call, data, error, loading } = useActorMethod("greet")
+  const { call, error, loading } = useActorMethod("addTodo")
 
   const [name, setName] = useState("")
 
@@ -31,7 +31,6 @@ const Greeting: React.FC<GreetingProps> = ({}) => {
         <label>Response: &nbsp;</label>
         {loading ? <span>Loading...</span> : null}
         {error ? <span>Error: {JSON.stringify(error)}</span> : null}
-        {data && <span>{JSON.stringify(data)}</span>}
       </section>
     </div>
   )
