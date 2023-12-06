@@ -1,14 +1,16 @@
-import createReActor from "@re-actor/core"
+"use client"
+import createReActor from "@ic-reactor/react"
 import { canisterId, createActor } from "declarations/hello"
 
 export const {
   ReActorProvider,
-  callActor,
   initialize,
+  useInitialized,
   useReActor,
   useActorState,
-  useActorMethod,
-  useAuthClient
+  useAuthClient,
+  useQueryCall,
+  useUpdateCall
 } = createReActor(agent =>
   createActor(canisterId, {
     agent

@@ -1,24 +1,14 @@
-import React, { useEffect } from "react"
-import { useActorMethod } from "service/hello"
+import React from "react"
+import { useQueryCall } from "service/hello"
 import Todo from "./Todo"
 
 interface TodosProps {}
 
-let timer: NodeJS.Timeout
-
 const Todos: React.FC<TodosProps> = ({}) => {
-  const { call, data, error, loading } = useActorMethod("getAllTodos")
-
-  useEffect(() => {
-    timer = setInterval(() => {
-      call()
-    }, 5000)
-
-    call()
-    return () => {
-      clearInterval(timer)
-    }
-  }, [])
+  const { data, error, loading } = useQueryCall({
+    functionName: "getAllTodos",
+    autoRefresh: true
+  })
 
   return (
     <div>

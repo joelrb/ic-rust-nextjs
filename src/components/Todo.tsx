@@ -1,19 +1,22 @@
 import { ToDo } from "declarations/hello/hello.did"
 import React from "react"
-import { useActorMethod } from "service/hello"
+import { useUpdateCall } from "service/hello"
 
 interface TodoProps extends ToDo {
   id: bigint
 }
 
 const Todo: React.FC<TodoProps> = ({ id, completed, description }) => {
-  const { call, error, loading } = useActorMethod("toggleTodo")
+  const { call, error, loading } = useUpdateCall({
+    functionName: "toggleTodo",
+    args: [id]
+  })
 
   const [checked, setChecked] = React.useState(completed)
 
   const toggleHandler = async () => {
     setChecked(!checked)
-    await call(id)
+    await call()
   }
 
   return (

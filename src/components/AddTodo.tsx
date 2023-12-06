@@ -1,10 +1,12 @@
 import React, { useState } from "react"
-import { useActorMethod } from "service/hello"
+import { useUpdateCall } from "service/hello"
 
-interface GreetingProps {}
+interface AddTodoProps {}
 
-const Greeting: React.FC<GreetingProps> = ({}) => {
-  const { call, error, loading } = useActorMethod("addTodo")
+const AddTodo: React.FC<AddTodoProps> = ({}) => {
+  const { call, error, loading } = useUpdateCall({
+    functionName: "addTodo"
+  })
 
   const [name, setName] = useState("")
 
@@ -16,7 +18,7 @@ const Greeting: React.FC<GreetingProps> = ({}) => {
   return (
     <div>
       <section>
-        <h2>Greeting</h2>
+        <h2>AddTodo</h2>
         <label htmlFor="name">Enter your name: &nbsp;</label>
         <input
           id="name"
@@ -25,7 +27,7 @@ const Greeting: React.FC<GreetingProps> = ({}) => {
           value={name}
           onChange={onChangeName}
         />
-        <button onClick={() => call(name)}>Send</button>
+        <button onClick={() => call([name])}>Send</button>
       </section>
       <section>
         <label>Response: &nbsp;</label>
@@ -36,4 +38,4 @@ const Greeting: React.FC<GreetingProps> = ({}) => {
   )
 }
 
-export default Greeting
+export default AddTodo

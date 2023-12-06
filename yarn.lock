@@ -5,9 +5,9 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@dfinity/agent@npm:^0.20.1":
-  version: 0.20.1
-  resolution: "@dfinity/agent@npm:0.20.1"
+"@dfinity/agent@npm:^0.20":
+  version: 0.20.2
+  resolution: "@dfinity/agent@npm:0.20.2"
   dependencies:
     "@noble/curves": "npm:^1.2.0"
     "@noble/hashes": "npm:^1.3.1"
@@ -16,55 +16,85 @@ __metadata:
     buffer: "npm:^6.0.3"
     simple-cbor: "npm:^0.4.1"
   peerDependencies:
-    "@dfinity/candid": ^0.20.1
-    "@dfinity/principal": ^0.20.1
-  checksum: b9baf3c458e09972e3f2ef78e062e3956df3bc8f5dd5200127a94775e6baec5338b06d86e0783f78fb4c5db5ef488cb764ee9a864073152c6f424c4ebfbc6598
+    "@dfinity/candid": ^0.20.2
+    "@dfinity/principal": ^0.20.2
+  checksum: 8b9035a9dd83e0a84b59c1df9386437b868b5503ad4905f9090a288b0b14d1a36df0f22bd63362f2e3d8b777a7c655d91ada009889784abbb4e26203b380882a
   languageName: node
   linkType: hard
 
-"@dfinity/auth-client@npm:^0.20.1":
-  version: 0.20.1
-  resolution: "@dfinity/auth-client@npm:0.20.1"
+"@dfinity/auth-client@npm:^0.20":
+  version: 0.20.2
+  resolution: "@dfinity/auth-client@npm:0.20.2"
   dependencies:
     idb: "npm:^7.0.2"
   peerDependencies:
-    "@dfinity/agent": ^0.20.1
-    "@dfinity/identity": ^0.20.1
-    "@dfinity/principal": ^0.20.1
-  checksum: e5d8fa1bac8ed061033e307b9c56f0aa03549dcbcac76f64cd9b8dc27d24fd6c7b2c1cee1d8f3c486f4c478264f8d74182aad19040bec2b5844b53b67af1a4a2
+    "@dfinity/agent": ^0.20.2
+    "@dfinity/identity": ^0.20.2
+    "@dfinity/principal": ^0.20.2
+  checksum: 118c3b64ba9c4978a5c4f1a225becfaa0ee8aa269870c6eaef0a8967e4af8202dae85f58051fb5561b1b36e695ac61cc55cd7d55f5dfe606b8598256972f340c
   languageName: node
   linkType: hard
 
-"@dfinity/candid@npm:^0.20.1":
-  version: 0.20.1
-  resolution: "@dfinity/candid@npm:0.20.1"
+"@dfinity/candid@npm:0.20, @dfinity/candid@npm:^0.20":
+  version: 0.20.2
+  resolution: "@dfinity/candid@npm:0.20.2"
   peerDependencies:
-    "@dfinity/principal": ^0.20.1
-  checksum: c844ec5220f18df780c80d68ba0e1213c808115165a08c7f03206a0f872b149c473a080812e5eb6e42b6bcab907f02b5364c0ab03782e6009e1a275189d5f3b5
+    "@dfinity/principal": ^0.20.2
+  checksum: b069243683a1e2221b5d88d6a9618e7a786f7fb0a2a588f996e7756827087b2d040c4bc6fe9f2d53c26be82d6219cac0f07337c752ed41b5d1bf99dd330b578f
   languageName: node
   linkType: hard
 
-"@dfinity/identity@npm:^0.20.1":
-  version: 0.20.1
-  resolution: "@dfinity/identity@npm:0.20.1"
+"@dfinity/identity@npm:^0.20":
+  version: 0.20.2
+  resolution: "@dfinity/identity@npm:0.20.2"
   dependencies:
     "@noble/curves": "npm:^1.2.0"
     "@noble/hashes": "npm:^1.3.1"
     borc: "npm:^2.1.1"
   peerDependencies:
-    "@dfinity/agent": ^0.20.1
-    "@dfinity/principal": ^0.20.1
+    "@dfinity/agent": ^0.20.2
+    "@dfinity/principal": ^0.20.2
     "@peculiar/webcrypto": ^1.4.0
-  checksum: cca6414411aa4cb92cdeb061a18c42282553a608c42607c88ee207402522e00cce622acbbd0fe7ae1c775f2cff81c3a4da22cca33e8cab340ecc3683bb535376
+  checksum: a978bfff5b49bd3bfaae23d9a1667b60b5d4800543198f0726a41b612f7b57fad6731a0792be5b9e4e5d8778f3dc50aab7909aff87e43b63409c41c60e15a14c
   languageName: node
   linkType: hard
 
-"@dfinity/principal@npm:^0.20.1":
-  version: 0.20.1
-  resolution: "@dfinity/principal@npm:0.20.1"
+"@dfinity/principal@npm:^0.20":
+  version: 0.20.2
+  resolution: "@dfinity/principal@npm:0.20.2"
   dependencies:
     "@noble/hashes": "npm:^1.3.1"
-  checksum: 14f468b6ce4dda9346dcb74113bd69e26071714faff342dde64adcc108ef9307bd369380356c4fe577bb8900adca5c47ac38cbbcbea712e666c96b085c1ee79f
+  checksum: b777ad7cb6a45ac7e76bda15e8c28d15d46fecaf0eb78b450223d8c6404cff43366ad69e95aed386eefdf8c00ab784082dddcb88cb8900de699964af4e25a084
+  languageName: node
+  linkType: hard
+
+"@ic-reactor/react@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@ic-reactor/react@npm:0.0.4"
+  dependencies:
+    "@dfinity/agent": "npm:^0.20"
+    "@dfinity/auth-client": "npm:^0.20"
+    "@dfinity/candid": "npm:0.20"
+    "@dfinity/identity": "npm:^0.20"
+    "@dfinity/principal": "npm:^0.20"
+    "@ic-reactor/store": "npm:^0.0.2"
+    zustand: "npm:4.4"
+  peerDependencies:
+    "@peculiar/webcrypto": 1.4
+    react: ">=16.8"
+  checksum: c9f944c9cd658e91af26b004a92bc5c8ebca575ac9774321a137f2501797f39fc1a32f58ea70fd907fc5e703cdba204a6ab887dd8f47ef801f39493a3dd59ea8
+  languageName: node
+  linkType: hard
+
+"@ic-reactor/store@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@ic-reactor/store@npm:0.0.2"
+  peerDependencies:
+    "@dfinity/agent": ^0.20
+    "@dfinity/auth-client": 0.20
+    "@dfinity/candid": ^0.20
+    zustand: ^4.4
+  checksum: 5dd5176a045353e6654ef381b751e36432cab2f997790bef96e5739ae17c253abadc51ca0adb630e038d73717f4aaf2146dad04a9eea07b1c806d529dea35efa
   languageName: node
   linkType: hard
 
@@ -154,42 +184,36 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@re-actor/core@npm:^0.2.2":
-  version: 0.2.2
-  resolution: "@re-actor/core@npm:0.2.2"
+"@peculiar/asn1-schema@npm:^2.3.6":
+  version: 2.3.8
+  resolution: "@peculiar/asn1-schema@npm:2.3.8"
   dependencies:
-    "@re-actor/store": "npm:^0.2.1"
-    "@re-actor/types": "npm:^0.2.0"
-    zustand: "npm:4.4"
-  peerDependencies:
-    react: ">=16.8"
-  checksum: c91c9bdd34ad15b7b041c5992b7394d36fa24a8afa2bd7b9821fc1cc35f0286e31bf7c6911c629dffd5c624179534a44213b23ce2dac95b1dbecc046235cbaf0
+    asn1js: "npm:^3.0.5"
+    pvtsutils: "npm:^1.3.5"
+    tslib: "npm:^2.6.2"
+  checksum: 65f16b2a7eb91365b6dac47730ffcad4617ef04b821e0a4286c379ac7283588b0a6744032ee686e0914a0886c2a055108ed945b9c4d22821a3b123640b61f3b2
   languageName: node
   linkType: hard
 
-"@re-actor/store@npm:^0.2.1":
-  version: 0.2.1
-  resolution: "@re-actor/store@npm:0.2.1"
-  peerDependencies:
-    "@dfinity/agent": ^0.20.1
-    "@dfinity/auth-client": 0.20.1
-    "@dfinity/candid": ^0.20.1
-    "@re-actor/types": ^0.0.3
-    zustand: ^4.4
-  checksum: d636a9082d58b42c59b8c00745fad91ddd436094b85d364e9cd0294ca06883cf0c7a41bf35c176f3934abdbd62cae1f5faeaa34b67d86b4d19a0c98f1c0b345e
+"@peculiar/json-schema@npm:^1.1.12":
+  version: 1.1.12
+  resolution: "@peculiar/json-schema@npm:1.1.12"
+  dependencies:
+    tslib: "npm:^2.0.0"
+  checksum: 202132c66dcc6b6aca5d0af971c015be2e163da2f7f992910783c5d39c8a7db59b6ec4f4ce419459a1f954b7e1d17b6b253f0e60072c1b3d254079f4eaebc311
   languageName: node
   linkType: hard
 
-"@re-actor/types@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "@re-actor/types@npm:0.2.0"
-  peerDependencies:
-    "@dfinity/agent": ^0.20.1
-    "@dfinity/auth-client": ^0.20.1
-    "@dfinity/candid": ^0.20.1
-    "@dfinity/principal": ^0.20.1
-    zustand: 4.4
-  checksum: ddf85cfdeaa253dfc746e27200572b5f4b143526beebf2b4b00e53326a887bc47f1db5f8c080d98e748e5da760212b8248e6ac3fb54ff2fdfcfe7c81ff1472ce
+"@peculiar/webcrypto@npm:^1.4":
+  version: 1.4.3
+  resolution: "@peculiar/webcrypto@npm:1.4.3"
+  dependencies:
+    "@peculiar/asn1-schema": "npm:^2.3.6"
+    "@peculiar/json-schema": "npm:^1.1.12"
+    pvtsutils: "npm:^1.3.2"
+    tslib: "npm:^2.5.0"
+    webcrypto-core: "npm:^1.7.7"
+  checksum: 0b778f32f81feee4f521397a1000d151fbc526ddde4f3f853e4a98815986c08b93b66654a8a9766dc161af13d8340bc3e00f04b17585474bbe260df7b586863a
   languageName: node
   linkType: hard
 
@@ -233,6 +257,17 @@ __metadata:
   version: 0.16.8
   resolution: "@types/scheduler@npm:0.16.8"
   checksum: f86de504945b8fc41b1f391f847444d542e2e4067cf7e5d9bfeb5d2d2393d3203b1161bc0ef3b1e104d828dabfb60baf06e8d2c27e27ff7e8258e6e618d8c4ec
+  languageName: node
+  linkType: hard
+
+"asn1js@npm:^3.0.1, asn1js@npm:^3.0.5":
+  version: 3.0.5
+  resolution: "asn1js@npm:3.0.5"
+  dependencies:
+    pvtsutils: "npm:^1.3.2"
+    pvutils: "npm:^1.1.3"
+    tslib: "npm:^2.4.0"
+  checksum: bb8eaf4040c8f49dd475566874986f5976b81bae65a6b5526e2208a13cdca323e69ce297bcd435fdda3eb6933defe888e71974d705b6fcb14f2734a907f8aed4
   languageName: node
   linkType: hard
 
@@ -361,12 +396,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ic-rust-nextjs@workspace:."
   dependencies:
-    "@dfinity/agent": "npm:^0.20.1"
-    "@dfinity/auth-client": "npm:^0.20.1"
-    "@dfinity/candid": "npm:^0.20.1"
-    "@dfinity/identity": "npm:^0.20.1"
-    "@dfinity/principal": "npm:^0.20.1"
-    "@re-actor/core": "npm:^0.2.2"
+    "@dfinity/agent": "npm:^0.20"
+    "@dfinity/auth-client": "npm:^0.20"
+    "@dfinity/candid": "npm:^0.20"
+    "@dfinity/identity": "npm:^0.20"
+    "@dfinity/principal": "npm:^0.20"
+    "@ic-reactor/react": "npm:^0.0.4"
+    "@peculiar/webcrypto": "npm:^1.4"
     "@types/node": "npm:20.9.4"
     "@types/react": "npm:18.2.38"
     dotenv: "npm:16.3.1"
@@ -514,6 +550,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pvtsutils@npm:^1.3.2, pvtsutils@npm:^1.3.5":
+  version: 1.3.5
+  resolution: "pvtsutils@npm:1.3.5"
+  dependencies:
+    tslib: "npm:^2.6.1"
+  checksum: d425aed316907e0b447a459bfb97c55d22270c3cfdba5a07ec90da0737b0e40f4f1771a444636f85bb6a453de90ff8c6b5f4f6ddba7597977166af49974b4534
+  languageName: node
+  linkType: hard
+
+"pvutils@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "pvutils@npm:1.1.3"
+  checksum: 23489e6b3c76b6afb6964a20f891d6bef092939f401c78bba186b2bfcdc7a13904a0af0a78f7933346510f8c1228d5ab02d3c80e968fd84d3c76ff98d8ec9aac
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:^18.2":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
@@ -608,7 +660,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.4.0":
+"tslib@npm:^2.0.0, tslib@npm:^2.4.0, tslib@npm:^2.5.0, tslib@npm:^2.6.1, tslib@npm:^2.6.2":
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: e03a8a4271152c8b26604ed45535954c0a45296e32445b4b87f8a5abdb2421f40b59b4ca437c4346af0f28179780d604094eb64546bee2019d903d01c6c19bdb
@@ -668,9 +720,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"webcrypto-core@npm:^1.7.7":
+  version: 1.7.7
+  resolution: "webcrypto-core@npm:1.7.7"
+  dependencies:
+    "@peculiar/asn1-schema": "npm:^2.3.6"
+    "@peculiar/json-schema": "npm:^1.1.12"
+    asn1js: "npm:^3.0.1"
+    pvtsutils: "npm:^1.3.2"
+    tslib: "npm:^2.4.0"
+  checksum: 57f0bee4e6c39f04fe5fc5fa615f245b3a9d41b330855cd1c525b96e9124d94e6cd06a174cbe1ff63dcb3b296995ae516e3ff02bad94baddd2a4e1060a854282
+  languageName: node
+  linkType: hard
+
 "zustand@npm:4.4":
-  version: 4.4.6
-  resolution: "zustand@npm:4.4.6"
+  version: 4.4.7
+  resolution: "zustand@npm:4.4.7"
   dependencies:
     use-sync-external-store: "npm:1.2.0"
   peerDependencies:
@@ -684,6 +749,6 @@ __metadata:
       optional: true
     react:
       optional: true
-  checksum: 78ed41a9e946eb5488a102fb8ed839f9ba901f45b83cec23539957939744a09d484aa430d5ef7066b007fa90dc780f8b531f0d176b3c132c8e11216ddc3dbd43
+  checksum: de507f09eb79039d74d282df6ffac6c7fb6b840ca3620b0392bcbe3f9049902802db5448b4002e6fcb32f903f7ec1aea14602049eb2a3a8410bfea7186d72fb7
   languageName: node
   linkType: hard

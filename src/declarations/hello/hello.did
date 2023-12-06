@@ -5,12 +5,10 @@ type ToDo =
  };
 service : {
   addTodo: (text) -> (nat);
-  clearAllTodos: () -> (text);
   clearComplete: () -> ();
   getAllTodos: () -> (vec record {
                             nat;
                             ToDo;
                           }) query;
-  showTodos: () -> (text) query;
   toggleTodo: (nat) -> ();
 }

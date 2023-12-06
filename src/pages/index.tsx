@@ -2,7 +2,7 @@ import Head from "next/head"
 
 import styles from "styles/Home.module.css"
 
-import Greeting from "components/Greeting"
+import Greeting from "components/AddTodo"
 import Login from "components/Login"
 import Todos from "components/Todos"
 import Image from "next/image"
