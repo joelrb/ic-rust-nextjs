@@ -2,7 +2,13 @@
   "canisters": {
     "hello": {
       "main": "backend/hello/main.mo",
-      "type": "motoko"
+      "type": "motoko",
+      "declarations": {
+        "bindings": null,
+        "env_override": null,
+        "node_compatibility": true,
+        "output": null
+      }
     },
     "internet_identity": {
       "type": "pull",
@@ -21,6 +27,6 @@
       "type": "assets"
     }
   },
-  "output_env_file": ".env.local",
+  "output_env_file": ".env",
   "version": 1
 }

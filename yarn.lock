@@ -68,33 +68,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ic-reactor/react@npm:^0.0.4":
-  version: 0.0.4
-  resolution: "@ic-reactor/react@npm:0.0.4"
+"@ic-reactor/react@npm:^*":
+  version: 0.0.8
+  resolution: "@ic-reactor/react@npm:0.0.8"
   dependencies:
     "@dfinity/agent": "npm:^0.20"
     "@dfinity/auth-client": "npm:^0.20"
     "@dfinity/candid": "npm:0.20"
     "@dfinity/identity": "npm:^0.20"
     "@dfinity/principal": "npm:^0.20"
-    "@ic-reactor/store": "npm:^0.0.2"
+    "@ic-reactor/store": "npm:^0.0.6"
     zustand: "npm:4.4"
   peerDependencies:
     "@peculiar/webcrypto": 1.4
     react: ">=16.8"
-  checksum: c9f944c9cd658e91af26b004a92bc5c8ebca575ac9774321a137f2501797f39fc1a32f58ea70fd907fc5e703cdba204a6ab887dd8f47ef801f39493a3dd59ea8
+  checksum: 79d7c2a86901946dff4dba03a31ce152673aff0539a90720227c3e55ecd974aec92501c666475d23c2f7fd085f6054da6f80f35ae6537d808dffaafe931c23c4
   languageName: node
   linkType: hard
 
-"@ic-reactor/store@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "@ic-reactor/store@npm:0.0.2"
-  peerDependencies:
-    "@dfinity/agent": ^0.20
-    "@dfinity/auth-client": 0.20
-    "@dfinity/candid": ^0.20
-    zustand: ^4.4
-  checksum: 5dd5176a045353e6654ef381b751e36432cab2f997790bef96e5739ae17c253abadc51ca0adb630e038d73717f4aaf2146dad04a9eea07b1c806d529dea35efa
+"@ic-reactor/store@npm:^0.0.6":
+  version: 0.0.6
+  resolution: "@ic-reactor/store@npm:0.0.6"
+  dependencies:
+    "@dfinity/agent": "npm:^0.20"
+    "@dfinity/auth-client": "npm:^0.20"
+    "@dfinity/candid": "npm:^0.20"
+    zustand: "npm:^4.4"
+  checksum: a655d77ec75bb2a80155a780a881fad6eab8583f21d2b2ea8e623b89c083ed60941c498e2587074fe2bc1cbc9ae9e4cba679af2bd1fcb408f54a6da721c1dbd2
   languageName: node
   linkType: hard
 
@@ -401,7 +401,7 @@ __metadata:
     "@dfinity/candid": "npm:^0.20"
     "@dfinity/identity": "npm:^0.20"
     "@dfinity/principal": "npm:^0.20"
-    "@ic-reactor/react": "npm:^0.0.4"
+    "@ic-reactor/react": "npm:^*"
     "@peculiar/webcrypto": "npm:^1.4"
     "@types/node": "npm:20.9.4"
     "@types/react": "npm:18.2.38"
@@ -733,7 +733,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zustand@npm:4.4":
+"zustand@npm:4.4, zustand@npm:^4.4":
   version: 4.4.7
   resolution: "zustand@npm:4.4.7"
   dependencies:

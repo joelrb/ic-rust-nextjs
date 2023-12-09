@@ -2,6 +2,7 @@ import Hash "mo:base/Hash";
 import Map "mo:base/HashMap";
 import Iter "mo:base/Iter";
 import Nat "mo:base/Nat";
+import Nat8 "mo:base/Nat";
 import Text "mo:base/Text";
 
 actor ToDoList {

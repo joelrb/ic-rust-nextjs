@@ -24,7 +24,7 @@
     "dfx:build": "sh ./predeploy.sh && dfx build",
     "predeploy": "sh ./predeploy.sh",
     "deploy": "sh ./predeploy.sh && dfx deploy",
-    "identity:deploy": "dfx deps deploy internet-identity",
+    "identity:deploy": "dfx deps deploy internet_identity",
     "generate": "dfx generate"
   },
   "dependencies": {
@@ -33,7 +33,7 @@
     "@dfinity/candid": "^0.20",
     "@dfinity/identity": "^0.20",
     "@dfinity/principal": "^0.20",
-    "@ic-reactor/react": "^0.0.4",
+    "@ic-reactor/react": "^*",
     "@peculiar/webcrypto": "^1.4",
     "next": "^14.0",
     "react": "^18.2",
