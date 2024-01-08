@@ -1,8 +1,10 @@
-import { useAuthClient } from "service/todo"
+import { useAgent } from "@ic-reactor/react"
 
 interface LoginProps {}
 
 const Login: React.FC<LoginProps> = ({}) => {
+  const { useAuthClient } = useAgent()
+
   const {
     login,
     logout,

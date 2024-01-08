@@ -19,6 +19,7 @@
     "start": "next start",
     "export": "next build",
     "dev": "next dev",
+    "deploy": "dfx deploy",
     "dfx:start": "dfx start --clean --background",
     "dfx:pull": "dfx deps pull",
     "dfx:identity": "dfx deps deploy internet_identity",

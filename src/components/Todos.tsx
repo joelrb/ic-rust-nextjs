@@ -1,10 +1,13 @@
 import React from "react"
-import { useQueryCall } from "service/todo"
 import Todo from "./Todo"
+import { useActor } from "@ic-reactor/react"
+import { TodoApp } from "pages/_app"
 
 interface TodosProps {}
 
 const Todos: React.FC<TodosProps> = ({}) => {
+  const { useQueryCall } = useActor<TodoApp>()
+
   const { data, error, loading } = useQueryCall({
     functionName: "getAllTodos",
     autoRefresh: true

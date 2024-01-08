@@ -1,9 +1,12 @@
+import { useActor } from "@ic-reactor/react"
+import { TodoApp } from "pages/_app"
 import React, { useState } from "react"
-import { useUpdateCall } from "service/todo"
 
 interface AddTodoProps {}
 
 const AddTodo: React.FC<AddTodoProps> = ({}) => {
+  const { useUpdateCall } = useActor<TodoApp>()
+
   const { call, error, loading } = useUpdateCall({
     functionName: "addTodo"
   })
