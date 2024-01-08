@@ -1,6 +1,6 @@
-# InternetComputer - Rust + Next.js Template
+# InternetComputer - Motoko + Next.js Template
 
-This is a template for creating a Next.js app with a Rust backend that can be deployed to the Internet Computer.
+This is a template for creating a Next.js app with a Motoko backend that can be deployed to the Internet Computer.
 
 ![Alt text](public/demo.png)
 
@@ -8,7 +8,6 @@ This is a template for creating a Next.js app with a Rust backend that can be de
 
 1. Install the [DFINITY Canister SDK](https://sdk.dfinity.org/docs/quickstart/local-quickstart.html)
 2. Install [Node.js](https://nodejs.org/en/download/)
-3. Install [Rust](https://www.rust-lang.org/tools/install)
 
 ## Running Locally
 
@@ -49,15 +48,14 @@ Running Next.js app:
 
 ## Notes
 
-- The Rust code is located in the `backend` directory
+- The Motoko code is located in the `backend` directory
 - The Next.js code is located in the `src` directory
 - The canister configuration is located in the `dfx.json` file
 
 ## Resources
 
 - [DFINITY Canister SDK](https://sdk.dfinity.org/docs/quickstart/local-quickstart.html)
-- [Rust](https://www.rust-lang.org/)
+- [Motoko](https://internetcomputer.org/docs/current/motoko/main/motoko)
 - [Next.js](https://nextjs.org/)
 - [ic-wasm](https://github.com/dfinity/ic-wasm)
-- [candid-extractor](https://github.com/dfinity/cdk-rs/tree/main/src/candid-extractor)
-- [ReActor](https://github.com/B3Pay/re-actor)
+- [ic-reactor](https://github.com/B3Pay/ic-reactor)

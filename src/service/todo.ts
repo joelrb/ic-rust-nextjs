@@ -1,6 +1,6 @@
 "use client"
 import { createReActor } from "@ic-reactor/react"
-import { canisterId, createActor } from "declarations/hello"
+import { canisterId, createActor } from "declarations/todo"
 
 export const {
   ReActorProvider,

@@ -1,5 +1,5 @@
 import React from "react"
-import { useQueryCall } from "service/hello"
+import { useQueryCall } from "service/todo"
 import Todo from "./Todo"
 
 interface TodosProps {}

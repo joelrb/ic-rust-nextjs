@@ -1,13 +1,10 @@
 {
   "canisters": {
-    "hello": {
-      "main": "backend/hello/main.mo",
+    "todo": {
+      "main": "backend/todo/main.mo",
       "type": "motoko",
       "declarations": {
-        "bindings": null,
-        "env_override": null,
-        "node_compatibility": true,
-        "output": null
+        "node_compatibility": true
       }
     },
     "internet_identity": {
@@ -16,7 +13,7 @@
     },
     "frontend": {
       "dependencies": [
-        "hello"
+        "todo"
       ],
       "frontend": {
         "entrypoint": "out/index.html"

@@ -26,3 +26,6 @@ out/
 target/
 Cargo.lock
 
+deps/pulled.json
+# ignore all files in the deps/candid directory
+deps/candid/*
