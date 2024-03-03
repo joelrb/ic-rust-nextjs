@@ -1,6 +1,6 @@
 {
   "name": "ic-rust-nextjs",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "author": "b3hr4d <b3hr4d@live.com>",
   "description": "Internet Computer Rust + NextJS Template",
   "keywords": [
@@ -19,28 +19,25 @@
     "start": "next start",
     "export": "next build",
     "dev": "next dev",
-    "dfx:start": "dfx start --background --clean",
     "dfx:stop": "dfx stop",
+    "dfx:pull": "dfx deps pull && dfx deps init",
+    "dfx:start": "dfx start --background --clean",
     "dfx:build": "sh ./predeploy.sh && dfx build",
+    "dfx:identity": "dfx deps deploy internet_identity",
     "predeploy": "sh ./predeploy.sh",
     "deploy": "dfx deploy",
     "generate": "dfx generate"
   },
   "dependencies": {
-    "@dfinity/agent": "^0.20.1",
-    "@dfinity/auth-client": "^0.20.1",
-    "@dfinity/candid": "^0.20.1",
-    "@dfinity/identity": "^0.20.1",
-    "@dfinity/principal": "^0.20.1",
-    "@re-actor/core": "^0.2.5",
-    "next": "^14.0",
+    "@ic-reactor/react": "^1.1.7",
+    "next": "^14.1",
     "react": "^18.2",
     "react-dom": "^18.2"
   },
   "devDependencies": {
-    "@types/node": "20.9.4",
-    "@types/react": "18.2.38",
-    "dotenv": "16.3.1",
-    "typescript": "5.3.2"
+    "@types/node": "20.11",
+    "@types/react": "18.2",
+    "dotenv": "16.4",
+    "typescript": "5.3"
   }
 }

@@ -1,1 +1,1 @@
-service : { greet : (text) -> (text) query }
+service : { get_name : () -> (opt text) query; set_name : (text) -> () }

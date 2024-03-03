@@ -11,3 +11,4 @@ crate-type = ["cdylib"]
 [dependencies]
 candid = "*"
 ic-cdk = "*"
+b3_utils = { version = "*", features = ["stable_memory"] }

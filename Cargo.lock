@@ -21,6 +21,20 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa"
 
 [[package]]
+name = "b3_utils"
+version = "0.8.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "139ee7e1bb9960fcb8fde1621e031da8c56eeee5a0fdadb58dc170054530f5f4"
+dependencies = [
+ "candid",
+ "hex",
+ "ic-cdk",
+ "ic-stable-structures",
+ "serde",
+ "serde_bytes",
+]
+
+[[package]]
 name = "binread"
 version = "2.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -169,6 +183,7 @@ dependencies = [
 name = "hello"
 version = "0.1.0"
 dependencies = [
+ "b3_utils",
  "candid",
  "ic-cdk",
 ]
@@ -190,6 +205,7 @@ dependencies = [
  "ic0",
  "serde",
  "serde_bytes",
+ "slotmap",
 ]
 
 [[package]]
@@ -205,6 +221,12 @@ dependencies = [
  "serde_tokenstream",
  "syn 1.0.109",
 ]
+
+[[package]]
+name = "ic-stable-structures"
+version = "0.6.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "be4867a1d9f232e99ca68682161d1fc67dff9501f4f1bf42d69a9358289ad0f8"
 
 [[package]]
 name = "ic0"
@@ -375,6 +397,15 @@ dependencies = [
  "cfg-if",
  "cpufeatures",
  "digest",
+]
+
+[[package]]
+name = "slotmap"
+version = "1.0.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "dbff4acf519f630b3a3ddcfaea6c06b42174d9a44bc70c620e9ed1649d58b82a"
+dependencies = [
+ "version_check",
 ]
 
 [[package]]

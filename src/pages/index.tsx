@@ -2,10 +2,16 @@ import Head from "next/head"
 
 import styles from "styles/Home.module.css"
 
-import Greeting from "components/Greeting"
 import Image from "next/image"
+import Login from "components/Login"
+import AddName from "components/AddName"
+import { useQueryCall } from "service/hello"
 
 function HomePage() {
+  const { call, data, loading, error } = useQueryCall({
+    functionName: "get_name"
+  })
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,7 +21,17 @@ function HomePage() {
         <h3 className={styles.title}>
           Welcome to the Internet Computer starter template
         </h3>
-        <Greeting />
+        <Login getName={call} />
+        <div className={styles.name}>
+          {loading ? (
+            <span>Loading...</span>
+          ) : error ? (
+            <span>{error.message}</span>
+          ) : data ? (
+            <span>Hello {data[0]}!</span>
+          ) : null}
+        </div>
+        <AddName getName={call} />
       </main>
       <footer className={styles.footer}>
         <a

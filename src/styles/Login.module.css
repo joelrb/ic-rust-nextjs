@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.user {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.loading {
+    animation: flash 1s infinite;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
