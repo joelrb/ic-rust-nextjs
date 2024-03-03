@@ -1,10 +1,9 @@
-import { useAgent } from "@ic-reactor/react"
+import { useAuth } from "service/todo"
+import styles from "styles/Login.module.css"
 
 interface LoginProps {}
 
-const Login: React.FC<LoginProps> = ({}) => {
-  const { useAuthClient } = useAgent()
-
+const Login: React.FC<LoginProps> = () => {
   const {
     login,
     logout,
@@ -13,37 +12,27 @@ const Login: React.FC<LoginProps> = ({}) => {
     identity,
     authenticating,
     authenticated
-  } = useAuthClient()
+  } = useAuth()
+
+  const handleLogin = async () => {
+    if (authenticated) {
+      await logout()
+    } else {
+      await login()
+    }
+  }
 
   return (
-    <>
-      <div>
-        {loginLoading && <div>Loading...</div>}
-        {loginError ? <div>{JSON.stringify(loginError)}</div> : null}
-        {identity && <div>{identity.getPrincipal().toText()}</div>}
-      </div>
-      {authenticated ? (
-        <div className="flex flex-col align-center">
-          <button onClick={() => logout()}>Logout</button>
-        </div>
-      ) : (
-        <div>
-          <button
-            onClick={() =>
-              login({
-                identityProvider:
-                  process.env.DFX_NETWORK === "ic"
-                    ? "https://identity.ic0.app/#authorize"
-                    : "http://localhost:4943?canisterId=rdmx6-jaaaa-aaaaa-aaadq-cai#authorize"
-              })
-            }
-            disabled={authenticating}
-          >
-            Login
-          </button>
-        </div>
+    <div className={styles.container}>
+      {loginError ? <div className={styles.error}>{loginError}</div> : null}
+      {loginLoading && <div className={styles.loading}>Loading...</div>}
+      {identity && (
+        <div className={styles.user}>{identity.getPrincipal().toText()}</div>
       )}
-    </>
+      <button onClick={handleLogin} disabled={authenticating}>
+        {authenticated ? "Logout" : "Login"}
+      </button>
+    </div>
   )
 }
 

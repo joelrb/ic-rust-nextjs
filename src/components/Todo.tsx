@@ -1,15 +1,12 @@
-import { useActor } from "@ic-reactor/react"
-import { ToDo } from "declarations/todo/todo.did"
-import { TodoApp } from "pages/_app"
 import React from "react"
+import { ToDo } from "declarations/todo/todo.did"
+import { useUpdateCall } from "service/todo"
 
 interface TodoProps extends ToDo {
   id: bigint
 }
 
 const Todo: React.FC<TodoProps> = ({ id, completed, description }) => {
-  const { useUpdateCall } = useActor<TodoApp>()
-
   const { call, error, loading } = useUpdateCall({
     functionName: "toggleTodo",
     args: [id]
