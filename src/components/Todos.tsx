@@ -6,7 +6,8 @@ interface TodosProps {}
 
 const Todos: React.FC<TodosProps> = ({}) => {
   const { data, error, loading } = useQueryCall({
-    functionName: "getAllTodos"
+    functionName: "getAllTodos",
+    refetchInterval: 1000
   })
 
   return (
@@ -16,7 +17,7 @@ const Todos: React.FC<TodosProps> = ({}) => {
         {loading ? <span>Loading...</span> : null}
         {error ? <span>Error: {JSON.stringify(error)}</span> : null}
         {data && data.length > 0
-          ? data.map(([id, todo]) => <Todo {...todo} key={id} id={id} />)
+          ? data[0]?.map(todo => <Todo {...todo} key={todo.id} />)
           : null}
       </section>
     </div>
