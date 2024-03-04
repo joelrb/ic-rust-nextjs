@@ -20,10 +20,11 @@
     "export": "next build",
     "dev": "next dev",
     "deploy": "dfx deploy",
-    "dfx:start": "dfx start --clean --background",
-    "dfx:pull": "dfx deps pull",
-    "dfx:identity": "dfx deps deploy internet_identity",
     "dfx:stop": "dfx stop",
+    "dfx:pull": "dfx deps pull && dfx deps init",
+    "dfx:start": "dfx start --background --clean",
+    "dfx:build": "sh ./predeploy.sh && dfx build",
+    "dfx:identity": "dfx deps deploy internet_identity",
     "dfx:generate": "dfx generate"
   },
   "dependencies": {
