@@ -24,6 +24,6 @@
       "type": "assets"
     }
   },
-  "output_env_file": ".env",
+  "output_env_file": ".env.local",
   "version": 1
 }
