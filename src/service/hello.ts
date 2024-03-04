@@ -1,16 +1,8 @@
-import createReActor from "@re-actor/core"
-import { canisterId, createActor } from "declarations/hello"
+import { createReactor } from "@ic-reactor/react"
+import { canisterId, idlFactory, hello } from "declarations/hello"
 
-export const {
-  ReActorProvider,
-  callActor,
-  initialize,
-  useReActor,
-  useActorState,
-  useActorMethod,
-  useAuthClient
-} = createReActor(agent =>
-  createActor(canisterId, {
-    agent
-  })
-)
+export const { useQueryCall, useAuth } = createReactor<typeof hello>({
+  canisterId,
+  idlFactory,
+  withLocalEnv: true
+})

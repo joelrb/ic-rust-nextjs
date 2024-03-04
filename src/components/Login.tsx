@@ -1,4 +1,4 @@
-import { useAuthClient } from "service/hello"
+import { useAuth } from "service/hello"
 
 const Login = () => {
   const {
@@ -9,7 +9,7 @@ const Login = () => {
     identity,
     authenticating,
     authenticated
-  } = useAuthClient()
+  } = useAuth()
 
   return (
     <>

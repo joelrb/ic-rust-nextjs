@@ -1,10 +1,13 @@
 import React, { useState } from "react"
-import { useActorMethod } from "service/hello"
+import { useQueryCall } from "service/hello"
 
 interface GreetingProps {}
 
 const Greeting: React.FC<GreetingProps> = ({}) => {
-  const { call, data, error, loading } = useActorMethod("greet")
+  const { call, data, error, loading } = useQueryCall({
+    functionName: "greet",
+    refetchOnMount: false
+  })
 
   const [name, setName] = useState("")
 
@@ -25,7 +28,7 @@ const Greeting: React.FC<GreetingProps> = ({}) => {
           value={name}
           onChange={onChangeName}
         />
-        <button onClick={() => call(name)}>Send</button>
+        <button onClick={() => call([name])}>Send</button>
       </section>
       <section>
         <label>Response: &nbsp;</label>
