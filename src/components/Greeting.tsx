@@ -9,14 +9,18 @@ import {
   TextFieldInput
 } from "@radix-ui/themes"
 import React, { useState } from "react"
-import { useActorMethod } from "service/hello"
+import { useQueryCall } from "service/hello"
 
 interface GreetingProps {}
 
 const Greeting: React.FC<GreetingProps> = ({}) => {
-  const { call, data, error, loading } = useActorMethod("greet")
-
   const [name, setName] = useState("")
+
+  const { call, data, error, loading } = useQueryCall({
+    functionName: "greet",
+    args: [name],
+    refetchOnMount: false
+  })
 
   function onChangeName(e: React.ChangeEvent<HTMLInputElement>) {
     const newName = e.target.value
@@ -35,7 +39,7 @@ const Greeting: React.FC<GreetingProps> = ({}) => {
           value={name}
           onChange={onChangeName}
         />
-        <Button type="button" onClick={() => call(name)}>
+        <Button type="button" onClick={call}>
           Send
         </Button>
       </Flex>
@@ -44,9 +48,13 @@ const Greeting: React.FC<GreetingProps> = ({}) => {
         <Code>hello</Code> actor.
       </Text>
       <Box>
-        {loading && <Text>Loading...</Text>}
-        {error ? <Text>Error: {JSON.stringify(error)}</Text> : null}
-        {data && <Text>Message: {JSON.stringify(data)}</Text>}
+        {loading ? (
+          <Text>Loading...</Text>
+        ) : error ? (
+          <Text color="red">Error: {JSON.stringify(error)}</Text>
+        ) : data ? (
+          <Text>{data}</Text>
+        ) : null}
       </Box>
     </Container>
   )
