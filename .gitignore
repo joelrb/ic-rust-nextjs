@@ -22,6 +22,9 @@ out/
 # Next.js
 .next/
 
+# Yarn
+.yarn/
+
 # Rust build artifacts
 target/
 Cargo.lock
