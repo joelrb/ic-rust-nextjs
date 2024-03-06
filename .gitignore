@@ -12,7 +12,7 @@
 
 # dfx temporary files
 .dfx/
-.yarn
+.yarn/
 canister_ids.json
 
 # frontend code
